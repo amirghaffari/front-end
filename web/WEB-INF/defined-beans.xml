@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+     xsi:schemaLocation="
+     http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+       <!-- Restful Web Service definition  -->
+    <bean id="restTemplate" class="org.springframework.web.client.RestTemplate">
+    <!--<bean id="restTemplate" class="frontend.rest.RestTemplate">-->
+        <property name="messageConverters">
+            <list>
+               <bean id="stringHttpMessageConverter"  class="org.springframework.http.converter.StringHttpMessageConverter">
+                    <property name="supportedMediaTypes" value="text/html"/>
+               </bean>
+               <!-- <bean id="messageConverter" class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+                    <constructor-arg ref="castorMarshaller" />
+                    <property name="supportedMediaTypes" value="application/xml"/>
+                </bean>
+                -->
+                <bean id="messageConverter" class="org.springframework.http.converter.xml.MarshallingHttpMessageConverter">
+                    <constructor-arg ref="webServiceXMLConvertor" />
+                    <property name="supportedMediaTypes" value="application/xml"/>
+                </bean>
+            </list>
+        </property>
+    </bean>
+    
+    <bean id="webServiceXMLConvertor" class="frontend.utils.WebServiceXMLConvertor">
+    </bean>
+    
+<!--       
+    <bean id="jaxbMarshaller" class="org.springframework.oxm.jaxb.Jaxb2Marshaller">
+            <property name="classesToBeBound">
+                    <list>
+                            <value>frontend.model.Employee</value>
+                    </list>
+            </property>
+    </bean>
+-->
+ <!--   <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller" >
+        <property name="mappingLocation" value="classpath:config/mapping.xml" />
+    </bean>
+ -->
+ <bean id="multipartResolver"
+    class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+    <!-- The maximum file size in bytes -->
+    <property name="maxUploadSize" value="10000000"/>
+</bean>
+ 
+</beans>

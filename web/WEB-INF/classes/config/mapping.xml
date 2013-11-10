@@ -1,0 +1,185 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN"
+                         "http://castor.org/mapping.dtd">
+<mapping>
+	<description>Description of the mapping</description>
+
+	<!-- mapping for class 'Employee' -->
+	<class name="frontend.model.Employee" auto-complete="true">
+		<map-to xml="employee"/>
+
+			<field name="id" type="long">
+				<bind-xml name="id" node="element"/>
+   			</field>
+
+			<field name="name" type="string">
+      				<bind-xml name="name" node="element"/>
+			</field>
+
+			<field name="email" type="string" >
+				<bind-xml name="email" node="element" />
+			</field>
+		
+	</class>
+
+</mapping>
+
+<!-- 
+A compelete sample of definition from IBM
+http://www.ibm.com/developerworks/xml/library/x-xjavacastor3/
+
+package ibm.xml.castor;
+
+import java.util.LinkedList;
+import java.util.List;
+
+public class Book {
+
+  /** The book's ISBN */
+  private String isbn;
+  /** The book's title */
+  private String title;
+  /** The authors' names */
+  private List<Author> authors;
+
+  public Book() { }
+
+  public Book(String isbn, String title, List<Author> authors) {
+    this.isbn = isbn;
+    this.title = title;
+    this.authors = authors;
+  }
+
+  public Book(String isbn, String title, Author author) {
+    this.isbn = isbn;
+    this.title = title;
+    this.authors = new LinkedList<Author>();
+    authors.add(author);
+  }
+
+  public void setIsbn(String isbn) {
+    this.isbn = isbn;
+  }
+
+  public String getIsbn() {
+    return isbn;
+  }
+
+  public void setTitle(String title) {
+    this.title = title;
+  }
+
+  public String getTitle() {
+    return title;
+  }
+
+  public void setAuthors(List<Author> authors) {
+    this.authors = authors;
+  }
+
+  public List<Author> getAuthors() {
+    return authors;
+  }
+
+  public void addAuthor(Author author) {
+    authors.add(author);
+  }
+}
+////////////////////////////////////////////////////////////
+
+package ibm.xml.castor;
+
+public class Author {
+
+  private String firstName, lastName;
+
+  public Author() { }
+
+  public Author(String firstName, String lastName) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+  }
+
+  public void setFirstName(String firstName) {
+    this.firstName = firstName;
+  }
+
+  public void setLastName(String lastName) {
+    this.lastName = lastName;
+  }
+
+  public String getFirstName() {
+    return firstName;
+  }
+  
+  public String getLastName() {
+    return lastName;
+  }
+
+}
+////////////////////////////////////////////////////////////
+<mapping>
+  <class name="ibm.xml.castor.Book">
+    <map-to xml="book" />
+
+    <field name="Title" type="java.lang.String">
+      <bind-xml name="title" node="element" location="book-info" />
+    </field>
+    <field name="Isbn" type="java.lang.String">
+      <bind-xml name="isbn" node="element" location="book-info" />
+    </field>
+
+    <field name="Authors" type="ibm.xml.castor.Author" collection="vector">
+      <bind-xml name="author" />
+    </field>
+  </class>
+
+  <class name="ibm.xml.castor.Author">
+    <field name="FirstName" type="java.lang.String">
+      <bind-xml name="first" node="attribute" location="name" />
+    </field>
+
+    <field name="LastName" type="java.lang.String">
+      <bind-xml name="last" node="attribute" location="name" />
+    </field>
+  </class>
+</mapping>
+
+
+
+http://castor.org/xml-mapping.html
+
+type can be one of following values:
+
+other		N	java.lang.Object
+string		N	java.lang.String
+integer		Y	java.lang.Integer.TYPE
+long		Y	java.lang.Long.TYPE
+boolean		Y	java.lang.Boolean.TYPE
+double		Y	java.lang.Double.TYPE
+float		Y	java.lang.Float.TYPE
+big-decimal	N	java.math.BigDecimal
+byte		Y	java.lang.Byte.TYPE
+date		N	java.util.Date
+short		Y	java.lang.Short.TYPE
+char		Y	java.lang.Character.TYPE
+bytes		N	byte[]
+chars		N	char[]
+strings		N	String[]
+locale		N	java.util.Locale
+
+///////////collection types
+
+array		<type_attribute>[]	<type_attribute>[]
+arraylist	java.util.List		java.util.Arraylist
+vector		java.util.Vector	java.util.Vector
+hashtable	java.util.Hashtable	java.util.Hashtable
+collection	java.util.Collection	java.util.Arraylist
+set		java.util.Set		java.util.Hashset
+map		java.util.Map		java.util.Hashmap
+sortedset	java.util.SortedSet	java.util.TreeSet
+
+-->
+
+
+

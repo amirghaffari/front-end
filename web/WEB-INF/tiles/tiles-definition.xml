@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<!DOCTYPE tiles-definitions PUBLIC
+        "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+        "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    <definition name="layout" template="/WEB-INF/pages/jsp/layout.jsp">
+        <put-attribute name="title" value=""/>
+        <put-attribute name="content" value=""/>
+    </definition>
+
+    <definition name="home" extends="layout">
+		<put-attribute name="title" value="Knowledge Platform's Home Page"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/home.jsp"/>
+    </definition>
+
+    <definition name="error" extends="layout">
+		<put-attribute name="title" value="Error Exception"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/error.jsp"/>
+    </definition>
+
+    <definition name="about" extends="layout">
+		<put-attribute name="title" value="About"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/about.jsp"/>
+    </definition>
+
+    <definition name="reviewers" extends="layout">
+		<put-attribute name="title" value="Reviewers"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/reviewers.jsp"/>
+    </definition>
+
+    <definition name="authors" extends="layout">
+		<put-attribute name="title" value="Authors"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/authors_home.jsp"/>
+    </definition>
+
+    <definition name="advanced_search" extends="layout">
+		<put-attribute name="title" value="Advanced Search"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/advanced_search.jsp"/>
+    </definition>
+
+    <definition name="authors_instruction" extends="layout">
+		<put-attribute name="title" value="Authors Instruction"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/authors_instruction.jsp"/>
+    </definition>
+
+    <definition name="authors_submission_instruction" extends="layout">
+		<put-attribute name="title" value="Authors Instruction Submission"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/authors_submission_instruction.jsp"/>
+    </definition>
+
+    <definition name="authors_submission_wizard_one" extends="layout">
+		<put-attribute name="title" value="Submission"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/wizard/authors_submission_wizard_one.jsp"/>
+    </definition>
+
+    <definition name="publication_abstract" extends="layout">
+		<put-attribute name="title" value="Abstract"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/publication/publication_abstract.jsp"/>
+    </definition>
+
+    <definition name="advanced_search_result" extends="layout">
+		<put-attribute name="title" value="Abstract"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/publication/advanced_search_result.jsp"/>
+    </definition>
+
+    <definition name="authors_submission_wizard_two" extends="layout">
+		<put-attribute name="title" value="Submission Wizard"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/wizard/authors_submission_wizard_two.jsp"/>
+    </definition>
+
+    <definition name="authors_submission_wizard_three" extends="layout">
+		<put-attribute name="title" value="Submission Wizard"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/wizard/authors_submission_wizard_three.jsp"/>
+    </definition>    
+
+    <definition name="authors_submission_wizard_four" extends="layout">
+		<put-attribute name="title" value="Submission Wizard"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/wizard/authors_submission_wizard_four.jsp"/>
+    </definition>    
+
+    <definition name="authors_submission_wizard_five" extends="layout">
+		<put-attribute name="title" value="Submission Wizard"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/wizard/authors_submission_wizard_five.jsp"/>
+    </definition>    
+
+    <definition name="authors_submission_wizard_last" extends="layout">
+		<put-attribute name="title" value="Submission Wizard"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/wizard/authors_submission_wizard_last.jsp"/>
+    </definition>    
+
+    <definition name="authors_profiles" extends="layout">
+		<put-attribute name="title" value=" Author Profile"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/authors_profiles.jsp"/>
+    </definition>    
+
+   <definition name="authors_previous_query" extends="layout">
+		<put-attribute name="title" value=" Author Profile"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/authors/authors_previous_query.jsp"/>
+    </definition>   
+
+   <definition name="statisticalview" extends="layout">
+		<put-attribute name="title" value="Statistical View"/>
+		<put-attribute name="content" value="/WEB-INF/pages/jsp/statisticalview.jsp"/>
+    </definition>   
+
+    <definition name="peerreview" extends="layout">
+                <put-attribute name="title" value="Peer Review"/>
+                <put-attribute name="content" value="/WEB-INF/pages/jsp/peerreview.jsp"/>
+    </definition>  
+    
+    <definition name="editorial" extends="layout">
+                <put-attribute name="title" value="Editorial Board"/>
+                <put-attribute name="content" value="/WEB-INF/pages/jsp/editorial.jsp"/>
+    </definition>  
+
+    <definition name="editorial_tracking_publication" extends="layout">
+                <put-attribute name="title" value="Editorial Tracking"/>
+                <put-attribute name="content" value="/WEB-INF/pages/jsp/editorial_tracking_publication.jsp"/>
+    </definition>  
+
+    <definition name="createUser" extends="layout">
+                <put-attribute name="title" value="Create New User"/>
+                <put-attribute name="content" value="/WEB-INF/pages/jsp/createUser.jsp"/>
+    </definition>  
+
+</tiles-definitions>

@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<!DOCTYPE mapping PUBLIC "-//EXOLAB/Castor Mapping DTD Version 1.0//EN" 
+castor.org "http://castor.org/mapping.dtd">
+<mapping>
+	<description>Description of the mapping</description>
+
+	<!-- mapping for class 'Employee' -->
+	<class name="frontend.model.Employee" auto-complete="true">
+		<map-to xml="employee"/>
+
+			<field name="id" type="long">
+				<bind-xml name="id" node="element"/>
+   			</field>
+
+			<field name="name" type="string">
+      				<bind-xml name="name" node="element"/>
+			</field>
+
+			<field name="email" type="string" >
+				<bind-xml> name="email" node="element" />
+			</field>
+		
+	</class>
+
+</mapping>
+
+<!-- 
+http://castor.org/xml-mapping.html
+
+type can be one of following values:
+
+other		N	java.lang.Object
+string		N	java.lang.String
+integer		Y	java.lang.Integer.TYPE
+long		Y	java.lang.Long.TYPE
+boolean		Y	java.lang.Boolean.TYPE
+double		Y	java.lang.Double.TYPE
+float		Y	java.lang.Float.TYPE
+big-decimal	N	java.math.BigDecimal
+byte		Y	java.lang.Byte.TYPE
+date		N	java.util.Date
+short		Y	java.lang.Short.TYPE
+char		Y	java.lang.Character.TYPE
+bytes		N	byte[]
+chars		N	char[]
+strings		N	String[]
+locale		N	java.util.Locale
+
+array		<type_attribute>[]	<type_attribute>[]
+arraylist	java.util.List		java.util.Arraylist
+vector		java.util.Vector	java.util.Vector
+hashtable	java.util.Hashtable	java.util.Hashtable
+collection	java.util.Collection	java.util.Arraylist
+set		java.util.Set		java.util.Hashset
+map		java.util.Map		java.util.Hashmap
+sortedset	java.util.SortedSet	java.util.TreeSet
+
+-->
+
+
+

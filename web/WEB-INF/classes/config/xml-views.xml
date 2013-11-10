@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<!-- Redirect views --> 
+    <bean id="author_redirect" 
+       class="org.springframework.web.servlet.view.RedirectView">
+        <property name="url" value="/authors" />
+        <property name="contextRelative"  value="true" />
+    </bean>
+
+    <bean id="authors_submission_wizard_one_redirect" 
+       class="org.springframework.web.servlet.view.RedirectView">
+        <property name="url" value="/authors/submission/wizard/one" />
+        <property name="contextRelative"  value="true" />
+    </bean>
+
+    <bean id="authors_submission_wizard_two_redirect" 
+       class="org.springframework.web.servlet.view.RedirectView">
+        <property name="url" value="/authors/submission/wizard/two" />
+        <property name="contextRelative"  value="true" />
+    </bean>
+    
+    <bean id="authors_submission_wizard_three_redirect" 
+       class="org.springframework.web.servlet.view.RedirectView">
+        <property name="url" value="/authors/submission/wizard/three" />
+        <property name="contextRelative"  value="true" />
+    </bean>
+
+    <bean id="authors_submission_wizard_four_redirect" 
+       class="org.springframework.web.servlet.view.RedirectView">
+        <property name="url" value="/authors/submission/wizard/four" />
+        <property name="contextRelative"  value="true" />
+    </bean>
+
+    <bean id="authors_submission_wizard_five_redirect" 
+       class="org.springframework.web.servlet.view.RedirectView">
+        <property name="url" value="/authors/submission/wizard/five" />
+        <property name="contextRelative"  value="true" />
+    </bean>
+
+    <bean id="authors_submission_wizard_last_redirect" 
+       class="org.springframework.web.servlet.view.RedirectView">
+        <property name="url" value="/authors/submission/wizard/last" />
+        <property name="contextRelative"  value="true" />
+    </bean>
+
+</beans>
